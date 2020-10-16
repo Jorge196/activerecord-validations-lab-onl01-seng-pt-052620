@@ -7,8 +7,8 @@ class Post < ActiveRecord::Base
   validate :must_be_clickbait
 
   def must_be_clickbait
-    if clickbait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
-      return clickbait.none?{|word| word.include?("clickbait")}(:must_be_clickbait)
-    end
+    clickbait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
+    clickbait.none?{|word| word.include?("clickbait")}(:must_be_clickbait)
+    
   end
 end
