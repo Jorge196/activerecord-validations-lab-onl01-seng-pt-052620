@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 
   def must_be_clickbait
     clickbait = ["Won't Believe", "Secret", "Top [number]", "Guess"]
-    binding.pry
+    # binding.pry
     # clickbait.none?{|word| .include?()}
 
   end
